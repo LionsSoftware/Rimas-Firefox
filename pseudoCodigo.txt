@@ -1,0 +1,66 @@
+
+var PALABRA_BUSCAR
+var OPCION_BUSQUEDA
+var ULT_LETR
+var ULT_LETR_PALABR_BBDD
+var PALABR_ACUMUL[]
+var DEFINI_ACUMUL[]
+var INDICE = 0
+
+
+Leer PALABRA_BUSCAR
+Leer OPCION_BUSQUEDA // devuelve número entero: 1, 2 o 3 (según sean las ultimas letras)
+
+/*
+ * Vuelvo negativo OPCION_BUSQUEDA, porque luego lo voy a utilizar en la funcion cortar como 2 parámetro, 
+ * devolviendo así la parte por la derecha de la palabra, según sea 1, 2 o 3 letras
+ */
+OPCION_BUSQUEDA = - (OPCION_BUSQUEDA)
+
+ULT_LETR = cortar(PALABRA_BUSCAR, OPCION_BUSQUEDA) // última/s letra/s de la palabra a buscar
+
+abrir BBDD // bbdd en local o en el server...
+
+leer REGISTRO
+
+mientras(REGISTRO =! eof){
+
+	
+	
+	ULT_LETR_PALABR_BBDD = CORTAR(REGISTRO[PALABRA], OPCION_BUSQUEDA)
+
+	/* Comparamos la última/s letra/s de la palabra a buscar, con la última/s letra/s de la palabra del 
+	 * diccionario de la BBDD, según sea la opción elegida
+	 */
+	if (ULT_LETR==ULT_LETR_PALABR_BBDD){ // Si coincide
+		
+		PALABR_ACUMUL[INDICE] = REGISTRO[PALABRA] // Metemos en un array la palabra completa
+		
+		INDICE++
+	}
+
+	leer REGISTRO
+
+}
+
+cerrar BBDD
+
+/*
+ * Aquí iria el acceso al diccionario de la RAE, para la descripción de la palabra
+ * Todavía no lo tengo claro como hacerlo...Investigar Api...
+ */
+
+/*
+ * Resultado final, sacamos los datos obtenidos (palabras y definiciones) por pantalla
+ */
+INDICE = 0
+mientras(PALABR_ACUMUL[INDICE]){
+	
+	// Cargamos la lista expandible con los datos obtenidos...
+	LISTA_EXPANDIBLE = PALABR_ACUMUL[INDICE]
+	LISTA_EXPANDIBLE = DEFINI_ACUMUL[INDICE]
+
+	INDICE++
+
+}
+
