@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Opciones | Rimas</title>
+<meta name="description" content="Opciones de la app">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body role="application">
+	<!-- Cabecera -->
+	<section role="region">
+		<header>
+			<button id="back-button">
+				<span class="icon icon-back">back</span>
+			</button>
+			<menu type="toolbar">
+				<a href="#" id="help-button"><span class="icon icon-help">ayuda</span></a>
+			</menu>
+			<h1>Rimas</h1>
+			<div id="help-submenu">
+				<ul>
+					<li><a href="ayuda.html">Ayuda</a></li>
+					<li><a href="creditos.html">Créditos</a></li>
+				</ul>
+			</div>
+		</header>
+	</section>
+	<!-- Lista de opciones de búsqueda -->
+	<section data-type="list">
+		<header>Opciones de búsqueda</header>
+		<ul>
+			<li>
+				<aside class="pack-end">
+					<button id="select-letters" class="icon icon-dialog">3 letras</button>
+				</aside> 
+				<p>Buscar rimas</p>
+			</li>
+		</ul>
+	</section>
+	<!-- Selector de número de letras a rimar -->
+	<form role="dialog" id="letters-selector"
+		data-type="value-selector">
+		<section class="scrollable">
+			<h1>Número de letras a rimar</h1>
+			<ol role="listbox">
+				<li aria-checked="true"><label><span>3 letras</span></label></li>
+				<li><label><span>4 letras</span></label></li>
+				<li><label><span>5 letras</span></label></li>
+			</ol>
+		</section>
+		<menu>
+			<button id="ok-button" class="affirmative full">OK</button>
+		</menu>
+	</form>
+	<!-- JS -->
+	<script src="js/main.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+</body>
+</html>

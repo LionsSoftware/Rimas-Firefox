@@ -1,0 +1,289 @@
+@import url(style_unstable/lists.css);
+@import url(style_unstable/value_selector.css);
+@import url(style_unstable/progress_activity.css);
+@import url(style_unstable/scrolling.css);
+@import url(style/input_areas.css);
+@import url(style/headers.css);
+@import url(style/buttons.css);
+@import url(style/status.css);
+
+html,body {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	background-color: #fff;
+	height: 100%;
+	min-height: 100%;
+	font-family: fira, sans-serif;
+}
+
+section[role="region"] {
+	margin-bottom: 1.5rem;
+}
+
+section#content {
+	margin: 1.5rem;
+	font-size: 1.9rem
+}
+
+section#content header {
+	border-bottom: 0.1rem solid #ff4E00;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+	font-weight: normal;
+	color: #ff4E00;
+	text-transform: uppercase;
+}
+
+section#content h1 {
+	padding: 1rem 1rem;
+	margin: 0;
+	font-size: 1.7rem;
+	font-weight: 500; line-height : 1.7rem;
+	font-weight: normal;
+	color: #000;
+	line-height: 1.7rem;
+}
+
+section#content p {
+	padding: 1rem 1rem;
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.5rem;
+	font-weight: normal;
+	color: #444;
+}
+
+#help-submenu {
+	border: solid 1px #ccc;
+	border-bottom-left-radius: 5px;
+	background-color: #dedede;
+	width: 100px;
+	position: absolute;
+	right: 0;
+	display: none
+}
+
+#help-submenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#help-submenu ul li:last-child {
+	border: none
+}
+
+#help-submenu ul li {
+	text-align: right;
+	border-bottom: dashed 1px #fff
+}
+
+#help-submenu ul li a {
+	color: #444;
+	display: block;
+	padding: 10px;
+}
+
+#help-submenu ul li a:active {
+	color: #fff;
+}
+
+ul#credits {
+	list-style-type: none;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+ul#credits>li {
+	border: none !important;
+}
+
+ul#credits>li>ul>li {
+	padding: 10px 20px 10px 20px;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+ul#credits>li>ul>li {
+	border: none !important
+}
+
+h2 {
+	border-bottom: solid 1px #ff4f00;
+}
+
+h3 {
+	text-transform: uppercase;
+	color: #ff4f00
+}
+
+h3.credits {
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #ff4f00;
+	padding-left: 20px;
+	background: url(../images/ui/credits.png) no-repeat;
+	border-bottom: solid 1px #e7e7e7
+}
+
+label {
+	font-size: 1.6rem;
+}
+
+#search-form {
+	transition: margin-top 0.4s ease-in;
+	margin: 1rem 2rem;
+	margin-top: 70px;
+}
+
+#letters-selector {
+	display: none;
+	opacity: 0
+}
+
+#search-button {
+	margin-top: 10px
+}
+
+#search-field {
+	margin-top: 5px
+}
+
+#results {
+	position: relative; display : none;
+	opacity: 0;
+	display: none;
+}
+
+#result-container {
+	text-align: center
+}
+
+#result-container progress {
+	
+}
+
+#error-message {
+	display: none;
+	opacity: 0
+}
+
+#splash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000
+}
+
+#splash img {
+	width: 100%;
+	height: 100%
+}
+
+#scrolling {
+	display: none;
+	opacity: 0;
+	top: 80px !important;
+	right: 0;
+	z-index: 10
+}
+
+#scrolling nav {
+	margin-top: 20px
+}
+
+#scrolling nav li {
+	padding: 10px
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+footer img {
+	display: block;
+}
+
+/*--------------------------------- HEADERS ---------------------------------*/
+section[role="region"]>header:first-child .icon.icon-settings {
+	background-image: url(../images/icons/settings.png);
+}
+
+section[role="region"]>header:first-child .icon.icon-help {
+	background-image: url(../images/icons/help.png);
+}
+
+/*--------------------------------- LISTS ---------------------------------*/
+[data-type="list"] li {
+	width: 100%;
+	height: auto;
+}
+
+[data-type="list"] li p:first-of-type {
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #444;
+	padding: 1rem 1rem 0;
+}
+
+[data-type="list"] aside.pack-end {
+	margin: 0 0 0 0;
+	vertical-align: middle;
+	line-height: 6.5rem;
+}
+
+[data-type="list"] li.def p {
+	white-space: normal !important;
+	background-color: #ededed;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #444;
+	padding: 1rem 1rem 1rem 1rem;
+}
+
+[data-type="list"] li.active {
+	background-color: #f2dfd8;
+}
+
+[data-type="list"] li.def p:first-of-type {
+	border-top: solid 1px #777;
+}
+
+[data-type="list"] li.def p:last-of-type {
+	border-bottom: solid 1px #777;
+}
+
+/*--------------------------------- ANIMS ---------------------------------*/
+
+/* Launch Value Selector */
+.fadeIn {
+	animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn { 
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Close Value Selector */
+.fadeOut {
+	animation: fadeOut 0.2s forwards;
+}
+
+@keyframes fadeOut { 
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"version": "1.0",
+	"name": "Rimas",
+	"description": "Obten rimas para cualquier palabra",
+	"launch_path": "index.html",
+	"icons": {		
+		"16": "/images/logo16.png",
+		"32": "/images/logo32.png",
+		"64": "/images/logo64.png",		
+		"128": "/images/logo128.png"
+	},
+	"developer": {
+		"name": "Borja Beltran",
+		"url": "http://www.borjabeltran.com"
+	},
+	"locales": {
+		"es": {
+			"description": "Obten rimas para cualquier palabra",
+			"developer": {
+				"url": "http://www.borjabeltran.com"
+			}
+		}
+	},
+	"default_locale": "es",
+	"type": "privileged",
+	"permissions": {
+        "systemXHR": {}
+    }
+}

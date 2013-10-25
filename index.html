@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rimas</title>
+<meta name="description" content="Encuentra las rimas a tu palabra">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body role="application">
+	<!-- Imagen del splash screen -->
+	<div id="splash">
+		<img src="images/ui/splash.png" />
+	</div>
+	<!-- Cabecera -->
+	<section role="region">
+		<header>
+			<menu type="toolbar">
+				<a href="#" id="settings-button"><span class="icon icon-settings">opciones</span></a>
+				<a href="#" id="help-button"><span class="icon icon-help">ayuda</span></a>
+			</menu>
+			<h1>Rimas</h1>
+			<div id="help-submenu">
+				<ul>
+					<li><a href="ayuda.html">Ayuda</a></li>
+					<li><a href="creditos.html">Créditos</a></li>
+				</ul>
+			</div>
+		</header>
+	</section>
+	<!-- Formulario de búsqueda -->
+	<section role="region">
+		<form id="search-form">
+			<label for="search-field">Introduce una palabra</label>
+			<p>
+				<input type="text" id="search-field" placeholder="Buscar..." required>
+				<button type="reset">Clear</button>
+			</p>
+			<button id="search-button">Obtener rimas</button>
+		</form>
+	</section>
+	<!-- Cargador de la lista de resultados -->
+	<section role="region" id="result-container">
+		<!-- <progress></progress> -->
+	</section>
+	<!-- Listado de resultados -->
+	<section id="results" data-type="list">
+		<header>Resultados</header>
+		<ul>
+			<li id="row_3">
+				<aside class="pack-end">
+					<img alt="placeholder" src="images/ui/bottom-arrow.png">
+				</aside> 
+				<a href="#"><p>Mero</p></a>
+			</li>
+			<li id="row_1" class="active">
+				<aside class="pack-end">
+					<img alt="placeholder" src="images/ui/top-arrow.png">
+				</aside> 
+				<a href="#"><p>Pero</p></a>
+			</li>
+			<li class="def" id="definition_1">
+				<p>1. m. Variedad de manzano, cuyo fruto es más largo que
+					grueso.</p>
+				<p>2. m. Fruto de este árbol.</p>
+				<p>ese ~ no está maduro.</p>
+			</li>
+			<li id="row_2">
+				<aside class="pack-end">
+					<img alt="placeholder" src="images/ui/bottom-arrow.png">
+				</aside> 
+				<a href="#"><p>Sero</p></a>
+			</li>
+		</ul>
+		<!-- Scroll de iniciales -->
+		<section role="region" id="scrolling">
+			<nav data-type="scrollbar">
+				<p>A</p>
+				<ol>
+					<li><a href="#">M</a></li>
+					<li><a href="#">P</a></li>
+					<li><a href="#">S</a></li>
+				</ol>
+			</nav>
+		</section>
+	</section>
+	<!-- Mensaje de error de validación -->
+	<section role="status" id="error-message">
+		<p>La palabra debe tener como mínimo <strong>4 letras</strong></p>
+	</section>
+	<!-- Pie -->
+	<footer id="footer">
+		<img src="images/ui/footer.png" />
+	</footer>
+	<!-- JS -->
+	<script src="js/main.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+</body>
+</html>
