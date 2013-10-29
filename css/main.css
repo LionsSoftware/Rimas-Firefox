@@ -172,6 +172,11 @@ label {
 	opacity: 0
 }
 
+#error-message2 {
+	display: none;
+	opacity: 0
+}
+
 #splash {
 	position: absolute;
 	top: 0;
