@@ -24,7 +24,7 @@ window.onload = function() {
 	$( "#search-button" ).click(function(ev) {
 		ev.preventDefault();
 		if (($('#search-field').val().length > 3) && tiene_numeros($('#search-field').val()) == 0)  {
-			$('#footer').animate({'opacity':0}, 400, 'linear');
+			//$('#footer').animate({'opacity':0}, 400, 'linear');
 			$('#search-form').animate({'margin-top':'10px'}, 200, 'linear');
 			$('#results').css("display","block").animate({'opacity':1}, 400, 'linear');
 			$('#scrolling').css("display","block").animate({'opacity':1}, 400, 'linear');
