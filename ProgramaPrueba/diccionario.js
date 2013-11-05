@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   $(".rimarpor").change(function() {
@@ -17,7 +16,7 @@ $(document).ready(function() {
               
               var html = '<div class="entrada">';
               html += '<h3 class="termino">'; 
-              html += '<a href=' + "http://raequel.sebastianoliva.com/json?query=" + encodeURI(palabraDicc) + '>' + palabraDicc + '</a>'; 
+              html += '<a href=' + "http://raequel.sebastianoliva.com/json?query=" + palabraDicc + '>' + palabraDicc + '</a>'; 
               html += '</h3>';
               html += '</div>';
               $('#diccionario').append($(html));
